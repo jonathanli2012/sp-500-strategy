@@ -1,1 +1,1 @@
-# s-p-500-strategy
+# sp-500-strategy
