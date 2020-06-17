@@ -13,7 +13,7 @@ def get_gains_arr(years):
 
 data = []
 legend = []
-for i in range(1, 7, 1):
+for i in range(1, 55, 2):
     legend.append(str(i) + " years")
     data.append(get_gains_arr(i))
 
