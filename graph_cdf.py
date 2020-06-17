@@ -30,7 +30,11 @@ def get_largest_val(d):
 
 def get_spacing(max):
     spacing = 0.0
-    if (max < 10):
+    if (max < 3):
+        spacing = 0.05
+    elif (max < 5):
+        spacing = 0.1
+    elif (max < 10):
         spacing = 0.25
     elif (max < 21):
         spacing = 0.5

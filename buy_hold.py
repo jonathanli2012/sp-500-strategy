@@ -11,10 +11,32 @@ def get_gains_arr(years):
 
     return gains
 
+def get_gains_arr_days(days):
+    gains = []
+    for i in range(0,len(closes) - days):
+        gains.append(closes[i+days]/closes[i])
+
+    return gains
+
+
 data = []
 legend = []
-for i in range(1, 55, 2):
+yrs = list(range(1, 5, 1))
+#yrs = [0.25, 0.5, 0.75, 1]
+for i in yrs:
     legend.append(str(i) + " years")
     data.append(get_gains_arr(i))
+
+graph_multiple_cdf(data, legend)
+
+
+
+data = []
+legend = []
+#days = list(range(1, 5, 1))
+days = [100, 200, 300]
+for i in days:
+    legend.append(str(i) + " days")
+    data.append(get_gains_arr_days(i))
 
 graph_multiple_cdf(data, legend)
