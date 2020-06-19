@@ -22,17 +22,19 @@ for d in data_csv:
   data.append(stock_val(d)) 
 
 closes = []
-date = []
+#date = []
 
 for d in data:
   closes.append(d.adj_close)
-  date.append(d.data)
+  #date.append(d.data)
 
 """
 import matplotlib.pyplot as plt
 import numpy as np
-
 fig = plt.figure()
 plt.plot(closes, '-o', markersize=1)
 plt.show()
 """
+
+def parse(tick):
+  return None
