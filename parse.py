@@ -2,7 +2,7 @@ import csv
 
 data = []
 
-data_file = open("data.csv")
+data_file = open("data/data.csv")
 data_csv = csv.reader(data_file)
 
 class stock_val:
