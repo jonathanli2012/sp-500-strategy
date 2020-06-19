@@ -22,9 +22,11 @@ for d in data_csv:
   data.append(stock_val(d)) 
 
 closes = []
+date = []
 
 for d in data:
   closes.append(d.adj_close)
+  date.append(d.data)
 
 """
 import matplotlib.pyplot as plt

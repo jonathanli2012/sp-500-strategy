@@ -18,25 +18,24 @@ def get_gains_arr_days(days):
 
     return gains
 
-
-data = []
-legend = []
-yrs = list(range(1, 5, 1))
-#yrs = [0.25, 0.5, 0.75, 1]
-for i in yrs:
-    legend.append(str(i) + " years")
-    data.append(get_gains_arr(i))
-
-graph_multiple_cdf(data, legend)
-
+def buy_hold_year(x, y ,z):
+    data = []
+    legend = []
+    yrs = list(range(x, y, z))
+    #yrs = [0.25, 0.5, 0.75, 1]
+    for i in yrs:
+        legend.append(str(i) + " years")
+        data.append(get_gains_arr(i))
+    graph_multiple_cdf(data, legend)
 
 
-data = []
-legend = []
-#days = list(range(1, 5, 1))
-days = [100, 200, 300]
-for i in days:
-    legend.append(str(i) + " days")
-    data.append(get_gains_arr_days(i))
+def buy_hold_day(x, y, z):
+    data = []
+    legend = []
+    days = list(range(x, y, z))
+    #days = [x, y, z]
+    for i in days:
+        legend.append(str(i) + " days")
+        data.append(get_gains_arr_days(i))
 
-graph_multiple_cdf(data, legend)
+    graph_multiple_cdf(data, legend)
