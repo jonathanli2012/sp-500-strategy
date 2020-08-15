@@ -18,6 +18,8 @@ def graph_cdf(d):
     plt.ylabel('CDF')
     plt.xlabel('Earning Multiples')
     plt.plot(x, y)
+    plt.grid()
+    plt.savefig("cdf.png", bbox_inches='tight')
     plt.show()
 
 def get_largest_val(d):
@@ -62,10 +64,11 @@ def graph_multiple_cdf(d, legend):
 
     title = "CDF of SPX returns from all entry points"
     plt.suptitle(title, fontsize=12)
-    plt.xticks(np.arange(0, max + get_spacing(max), get_spacing(max)))
+    #plt.xticks(np.arange(0, max + get_spacing(max)))
     plt.yticks(np.arange(0, 1.05, 0.05))
     plt.ylabel('CDF')
     plt.xlabel('Earning Multiples')
     plt.legend(loc="lower right")
     plt.grid()
+    plt.savefig("cdf.png", bbox_inches='tight')
     plt.show()

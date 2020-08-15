@@ -4,12 +4,12 @@ import yfinance as yf
 import pandas
 
 def main():
-    tick_str = input("Ticker: ")
-    tick = yf.Ticker(tick_str)
-    tick_history = tick.history(period="max")
+    #tick_str = input("Ticker: ")
+    #tick = yf.Ticker(tick_str)
+    #tick_history = tick.history(period="max")
     #data = parse(tick.history(period="max"))
     #tick_history.to_csv('tmp.csv', encoding='utf-8', index=True)
-    print(tick_history)
+    #print(tick_history)
 
     exit = 0
     while(exit == 0):
